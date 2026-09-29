@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "secondary-fixed-dim": "#d4c4ab", "on-secondary-fixed-variant": "#504532", "surface-variant": "#e7e2da", "on-primary-fixed-variant": "#474646", "on-error-container": "#93000a", "on-tertiary": "#ffffff", "secondary-container": "#f1e0c5", "outline-variant": "#c4c7c7", "inverse-on-surface": "#f5f0e8", "inverse-surface": "#32302b", "surface": "#fef9f1", "secondary-fixed": "#f1e0c5", "on-secondary-container": "#6f634d", "oxblood": "#641F28", "surface-container": "#f2ede5", "on-tertiary-fixed": "#3e030e", "primary": "#000000", "champagne": "#D8C8AE", "secondary": "#695d48", "error": "#ba1a1a", "surface-bright": "#fef9f1", "primary-fixed": "#e5e2e1", "on-primary-fixed": "#1c1b1b", "surface-dim": "#ded9d2", "inverse-primary": "#c8c6c5", "on-primary": "#ffffff", "surface-container-low": "#f8f3eb", "primary-container": "#1c1b1b", "outline": "#747878", "error-container": "#ffdad6", "tertiary-container": "#3e030e", "warm-ivory": "#F4EFE7", "on-tertiary-fixed-variant": "#782e37", "tertiary-fixed-dim": "#ffb2b7", "surface-container-high": "#ece8e0", "deep-espresso": "#3A2924", "ink-black": "#151515", "on-tertiary-container": "#c36971", "on-primary-container": "#858383", "surface-container-lowest": "#ffffff", "tertiary-fixed": "#ffdadb", "background": "#fef9f1", "tertiary": "#000000", "surface-container-highest": "#e7e2da", "on-surface-variant": "#444748", "on-secondary-fixed": "#231a0a", "on-surface": "#1d1c17", "surface-tint": "#5f5e5e", "on-error": "#ffffff", "on-background": "#1d1c17", "primary-fixed-dim": "#c8c6c5", "on-secondary": "#ffffff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter-desktop": "2.5rem", "space-2xl": "4rem", "space-3xl": "6.5rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "margin": "1.25rem", "gutter": "1.5rem", "margin-desktop": "4rem", "space-xl": "2.5rem", "space-xs": "0.25rem", "margin-tablet": "2.5rem", "space-md": "1rem" }, "fontFamily": { "headline-lg-mobile": [ "Playfair Display" ], "headline-md": [ "Playfair Display" ], "label-caps-wide": [ "Plus Jakarta Sans" ], "display-hero-mobile": [ "Playfair Display" ], "label-ui": [ "Plus Jakarta Sans" ], "body-md": [ "Plus Jakarta Sans" ], "body-lg": [ "Plus Jakarta Sans" ], "display-hero": [ "Playfair Display" ], "price-editorial": [ "Plus Jakarta Sans" ], "body-sm": [ "Plus Jakarta Sans" ], "headline-lg": [ "Playfair Display" ], "title-editorial": [ "Playfair Display" ], "headline-sm": [ "Playfair Display" ] }, "fontSize": { "headline-lg-mobile": [ "2rem", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "headline-md": [ "2rem", { "lineHeight": "1.25", "letterSpacing": "0em", "fontWeight": "400" } ], "label-caps-wide": [ "0.6875rem", { "lineHeight": "1.4", "letterSpacing": "0.18em", "fontWeight": "600" } ], "display-hero-mobile": [ "2.75rem", { "lineHeight": "1.12", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "label-ui": [ "0.8125rem", { "lineHeight": "1.2", "letterSpacing": "0.04em", "fontWeight": "500" } ], "body-md": [ "0.9375rem", { "lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400" } ], "body-lg": [ "1.125rem", { "lineHeight": "1.65", "letterSpacing": "0.005em", "fontWeight": "400" } ], "display-hero": [ "4.5rem", { "lineHeight": "1.08", "letterSpacing": "-0.02em", "fontWeight": "400" } ], "price-editorial": [ "1rem", { "lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "500" } ], "body-sm": [ "0.8125rem", { "lineHeight": "1.55", "letterSpacing": "0.015em", "fontWeight": "400" } ], "headline-lg": [ "3rem", { "lineHeight": "1.15", "letterSpacing": "-0.015em", "fontWeight": "400" } ], "title-editorial": [ "1.25rem", { "lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "400" } ], "headline-sm": [ "1.5rem", { "lineHeight": "1.3", "letterSpacing": "0em", "fontWeight": "400" } ] } } } };</script></head><body class="bg-warm-ivory text-ink-black antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-warm-ivory/90 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.03)]"><div class="h-20 w-full px-margin md:px-margin-tablet lg:px-margin-desktop flex items-center justify-between"><div class="flex items-center gap-space-2xl"><a class="font-headline-sm text-headline-sm uppercase tracking-wider text-ink-black select-none" data-path="home" href="#">VAIRA</a><nav class="hidden md:flex items-center gap-space-xl" data-active-classes="text-ink-black font-semibold"><a class="font-label-caps-wide text-label-caps-wide uppercase text-on-surface-variant hover:text-ink-black transition-colors duration-200" data-path="collection" href="#">Collection</a><a class="font-label-caps-wide text-label-caps-wide uppercase text-on-surface-variant hover:text-ink-black transition-colors duration-200" data-path="store-promise" href="#">Store Promise</a><a class="font-label-caps-wide text-label-caps-wide uppercase text-on-surface-variant hover:text-ink-black transition-colors duration-200" data-path="editorial" href="#">Editorial</a></nav></div><div class="flex items-center gap-space-lg"><button aria-label="Cart" class="relative flex items-center text-ink-black hover:text-oxblood transition-colors focus:outline-none" type="button"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span class="absolute -top-1.5 -right-2 bg-oxblood text-on-tertiary font-label-caps-wide text-[0.625rem] w-4 h-4 rounded-full flex items-center justify-center leading-none">2</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-warm-ivory"><div class="flex flex-col w-full text-ink-black selection:bg-champagne selection:text-ink-black">
+<!-- HERO SECTION -->
+<section class="relative w-full px-margin md:px-margin-tablet lg:px-margin-desktop pt-space-xl pb-space-3xl overflow-hidden">
+<div class="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Left Column: Typography & Intent -->
+<div class="lg:col-span-6 flex flex-col justify-center space-y-space-lg lg:pr-space-xl z-10">
+<div class="inline-flex items-center space-x-2">
+<span class="w-8 h-[1px] bg-secondary-fixed-dim"></span>
+<span class="font-label-caps-wide text-label-caps-wide uppercase tracking-widest text-secondary">The Launch Collection</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg lg:text-display-hero text-ink-black tracking-tight leading-[1.05]">
+          Make an entrance. <br/>
+<span class="italic font-normal text-deep-espresso">Leave an impression.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-xl font-light">
+          Contemporary Indian occasionwear for women who were never meant to blend in. Fluid drapes, architectural silhouettes, and tactile silk.
+        </p>
+<div class="pt-space-md flex flex-wrap items-center gap-space-md">
+<a class="inline-flex items-center justify-center bg-ink-black text-warm-ivory px-8 py-4 font-label-caps-wide text-label-caps-wide uppercase tracking-widest hover:bg-deep-espresso transition-all duration-300" href="#collection-section">
+            Explore the Collection
+          </a>
+<a class="inline-flex items-center justify-center bg-transparent text-ink-black px-6 py-4 font-label-caps-wide text-label-caps-wide uppercase tracking-widest hover:text-oxblood transition-colors" href="#store-promise">
+            Our Philosophy <span class="material-symbols-outlined ml-2 text-sm">arrow_downward</span>
+</a>
+</div>
+<!-- Metric micro-strip -->
+<div class="pt-space-xl grid grid-cols-3 gap-6 border-t border-champagne/40 max-w-lg">
+<div>
+<span class="block font-headline-sm text-headline-sm text-ink-black">03</span>
+<span class="font-label-caps-wide text-[0.625rem] uppercase text-secondary">Launch Pieces</span>
+</div>
+<div>
+<span class="block font-headline-sm text-headline-sm text-ink-black">100%</span>
+<span class="font-label-caps-wide text-[0.625rem] uppercase text-secondary">Pure Silk Form</span>
+</div>
+<div>
+<span class="block font-headline-sm text-headline-sm text-ink-black">0</span>
+<span class="font-label-caps-wide text-[0.625rem] uppercase text-secondary">Superfluous Trim</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Visual Composition with Crop from IMAGE_2 -->
+<div class="lg:col-span-6 relative">
+<div class="relative w-full aspect-[4/5] bg-surface-container overflow-hidden shadow-xl">
+<!-- Main Hero Composition: Fluid presentation of silhouettes -->
+<div class="absolute inset-0 overflow-hidden">
+<img alt="VAIRA occasionwear collection" class="w-full h-full object-cover object-[18%_center] scale-105 transition-transform duration-1000 ease-out hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCA_XaNd-kR3dEZ5FL9yr_FyTYTQI-OicrqvAeXCfgIDhAZekq4xETShc1uoqeaQwb-kcMWlfDFhbIDpxE4eVnYnFhBkrtMwM4ooOSFzD3mry27NZcF0lWR4cA85fdzVJT30K2P2PwOb_PBBIK64AUxTcoBVTJckpDL74DKJ1DPTastHw3eZn_QyeR4IqK0oQbHdruVuF-N_oscuyE915VWrGOBl0a9q_YqnvHn22aa9uaUPwc8q_qVnDVVmBYSCM_5SA"/>
+</div>
+<!-- Editorial Card Overlay -->
+<div class="absolute bottom-6 left-6 right-6 p-6 bg-warm-ivory/95 backdrop-blur-md shadow-sm border border-champagne/30 flex items-center justify-between">
+<div class="space-y-1">
+<span class="font-label-caps-wide text-label-caps-wide uppercase text-oxblood block">Look 01 • Editorial</span>
+<p class="font-title-editorial text-title-editorial text-ink-black">The Monolithic Drape</p>
+</div>
+<a class="w-10 h-10 rounded-full bg-ink-black text-warm-ivory flex items-center justify-center hover:bg-oxblood transition-colors" href="#collection-section">
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="absolute -bottom-6 -right-6 w-32 h-32 border border-champagne/50 -z-10 hidden md:block"></div>
+</div>
+</div>
+</section>
+<!-- STORE PROMISE / MANIFESTO SECTION -->
+<section class="w-full bg-surface-container py-space-3xl px-margin md:px-margin-tablet lg:px-margin-desktop" id="store-promise">
+<div class="max-w-[1200px] mx-auto flex flex-col items-center text-center space-y-space-xl">
+<div class="space-y-space-sm max-w-2xl">
+<span class="font-label-caps-wide text-label-caps-wide uppercase tracking-[0.25em] text-secondary">The Store Promise</span>
+<h2 class="font-headline-lg text-headline-lg lg:text-[3.75rem] text-ink-black tracking-tight leading-tight">
+          “Presence without excess.”
+        </h2>
+</div>
+<div class="max-w-3xl space-y-space-md">
+<p class="font-body-lg text-body-lg text-ink-black font-light leading-relaxed">
+          Designed for the moment they remember. Sarees, blouses and shararas with clean silhouettes, considered materials and a distinctly modern point of view.
+        </p>
+<p class="font-body-md text-body-md text-secondary max-w-2xl mx-auto">
+          We replace ornate excess with structural tension. Silk satin that flows with statuesque fluidity, tailored shoulders, and high-waisted flares calculated to make an entrance.
+        </p>
+</div>
+<!-- Emotional Transformation Ladder -->
+<div class="w-full pt-space-lg">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+<div class="p-6 bg-warm-ivory text-left flex flex-col justify-between h-36 border-t-2 border-champagne">
+<span class="font-label-caps-wide text-label-caps-wide text-secondary uppercase">Step 01</span>
+<span class="font-title-editorial text-title-editorial text-ink-black font-normal">Getting dressed</span>
+<span class="text-[11px] text-secondary/80">Tactile silk against bare skin</span>
+</div>
+<div class="p-6 bg-warm-ivory text-left flex flex-col justify-between h-36 border-t-2 border-champagne">
+<span class="font-label-caps-wide text-label-caps-wide text-secondary uppercase">Step 02</span>
+<span class="font-title-editorial text-title-editorial text-ink-black font-normal">Feeling composed</span>
+<span class="text-[11px] text-secondary/80">Calibrated architectural cut</span>
+</div>
+<div class="p-6 bg-warm-ivory text-left flex flex-col justify-between h-36 border-t-2 border-champagne">
+<span class="font-label-caps-wide text-label-caps-wide text-secondary uppercase">Step 03</span>
+<span class="font-title-editorial text-title-editorial text-ink-black font-normal">Entering with confidence</span>
+<span class="text-[11px] text-secondary/80">Sculptural ease across space</span>
+</div>
+<div class="p-6 bg-warm-ivory text-left flex flex-col justify-between h-36 border-t-2 border-oxblood">
+<span class="font-label-caps-wide text-label-caps-wide text-oxblood uppercase font-bold">Step 04</span>
+<span class="font-title-editorial text-title-editorial text-ink-black font-normal">Becoming memorable</span>
+<span class="text-[11px] text-secondary/80">Unapologetic presence</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- LAUNCH PRODUCT FAMILY (COLLECTION) -->
+<section class="w-full py-space-3xl px-margin md:px-margin-tablet lg:px-margin-desktop" id="collection-section">
+<div class="max-w-[1440px] mx-auto">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between pb-space-2xl border-b border-champagne/40 gap-4">
+<div>
+<span class="font-label-caps-wide text-label-caps-wide uppercase tracking-[0.2em] text-secondary block mb-2">Architectural Occasionwear</span>
+<h2 class="font-headline-lg text-headline-lg text-ink-black">The Launch Family</h2>
+</div>
+<p class="font-body-sm text-body-sm text-secondary max-w-sm">
+          Exactly three definitive garments engineered for modern evening formal wear. Select any piece to inspect drape and crop hints.
+        </p>
+</div>
+<!-- 3 Products Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 pt-space-xl">
+<!-- PRODUCT 01: THE AFTERDARK SAREE -->
+<article class="product-card flex flex-col bg-surface-container-low transition-all duration-300 hover:shadow-lg" data-product-id="1">
+<!-- Image Viewport with interactive zoom/crop -->
+<div class="relative w-full aspect-[3/4] bg-surface-container overflow-hidden group">
+<div class="w-full h-full overflow-hidden flex items-center justify-center" id="img-container-1">
+<!-- Left 33% Crop: object-position [0% center] or [12% center] with scale -->
+<img alt="The Afterdark Saree in Ink Black Silk Satin" class="w-full h-full object-cover object-[14%_center] scale-100 transition-all duration-500 ease-out" id="product-img-1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcd7P8x7vA_cmWEvq2CjbNgMu9_1XrHWxEXjDfPfdoOkSSodfiSCMn8V29m1VFJaKc2oy9e6KJd-cdu_FOI9JIXPaLkbZ1AL0gUG1AWxQP8ASFKlHxJlB0XVGdQmHlUQphrZEtdBTZGWvoWfu7sf104X0xot4xz9RBTdzly2iqf7sUCgAF10nI2t8Jw5JbUG5RiXcmywsToSH7NVMOWQCGsx6Vu3vVFkveAVHTzBmWA_9p2gmxlWmXNSFSTkHBmFRLtQ"/>
+</div>
+<!-- In-Card Zoom & Crop Bar -->
+<div class="absolute bottom-3 left-3 right-3 bg-warm-ivory/90 backdrop-blur-sm p-2 flex items-center justify-between text-xs transition-opacity duration-300">
+<div class="flex items-center space-x-1">
+<span class="font-label-caps-wide text-[9px] uppercase tracking-wider text-secondary mr-1">Zoom:</span>
+<button class="zoom-btn-1 px-2 py-1 bg-ink-black text-warm-ivory font-label-caps-wide text-[9px]" onclick="setZoom(1, 1.0, '14% center')" type="button">1.0x</button>
+<button class="zoom-btn-1 px-2 py-1 bg-transparent text-ink-black hover:bg-champagne/40 font-label-caps-wide text-[9px]" onclick="setZoom(1, 1.25, '14% 30%')" type="button">1.25x</button>
+<button class="zoom-btn-1 px-2 py-1 bg-transparent text-ink-black hover:bg-champagne/40 font-label-caps-wide text-[9px]" onclick="setZoom(1, 2.0, '14% 75%')" type="button">2.0x</button>
+</div>
+<button class="font-label-caps-wide text-[9px] uppercase tracking-wider text-oxblood hover:underline" onclick="openDetailModal(1)" type="button">
+                Inspect
+              </button>
+</div>
+</div>
+<!-- Product Details -->
+<div class="p-6 flex flex-col flex-grow justify-between space-y-4">
+<div class="space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-caps-wide text-label-caps-wide uppercase text-secondary">Product 01 • Saree</span>
+<span class="font-price-editorial text-price-editorial text-ink-black font-semibold">₹38,500</span>
+</div>
+<h3 class="font-title-editorial text-2xl text-ink-black">The Afterdark Saree</h3>
+<p class="font-body-sm text-body-sm text-secondary">
+                Fluid six-yard saree with a clean fall and narrow finished edge. Designed for evening occasionwear.
+              </p>
+</div>
+<!-- Approved claims tags -->
+<div class="pt-2 border-t border-champagne/30">
+<div class="flex flex-wrap gap-1.5 mb-4">
+<span class="bg-surface-variant text-on-surface-variant font-label-caps-wide text-[9px] px-2 py-0.5 uppercase">Silk satin</span>
+<span class="bg-surface-variant text-on-surface-variant font-label-caps-wide text-[9px] px-2 py-0.5 uppercase">Ink Black</span>
+<span class="bg-surface-variant text-on-surface-variant font-label-caps-wide text-[9px] px-2 py-0.5 uppercase">6 Yards</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex-1 bg-ink-black text-warm-ivory py-3 px-4 font-label-caps-wide text-label-caps-wide uppercase tracking-widest hover:bg-deep-espresso transition-colors text-center" onclick="addToCart(1)" type="button">
+                  Add to Cart
+                </button>
+<button class="p-3 bg-surface-variant text-ink-black hover:bg-champagne transition-colors" onclick="openDetailModal(1)" title="View details" type="button">
+<span class="material-symbols-outlined text-[18px] block">visibility</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- PRODUCT 02: THE AFTERDARK SCULPT BLOUSE -->
+<article class="product-card flex flex-col bg-surface-container-low transition-all duration-300 hover:shadow-lg" data-product-id="2">
+<!-- Image Viewport with interactive zoom/crop -->
+<div class="relative w-full aspect-[3/4] bg-surface-container overflow-hidden group">
+<div class="w-full h-full overflow-hidden flex items-center justify-center" id="img-container-2">
+<!-- Center 34% Crop: object-position [50% center] with scale -->
+<img alt="The Afterdark Sculpt Blouse in Oxblood Silk Satin" class="w-full h-full object-cover object-[50%_center] scale-100 transition-all duration-500 ease-out" id="product-img-2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-h-GRoavoS2F0HDqYECB0ZNimUiPB-1z0qJtQaYlRqUGmmH_6LBXfa5a7x1w0xQ9caeSJoihLiuUg5iqzl5RJtp7VxZJYWCB0ovjkgTj_qqMtXzROqfUYmVIJfLtbxTnPcCHPhucDlRsLjkVxOv9YuYVHDpa5ZU5kiHuGtK6lrZQcnSx_yZamuRtZrVAWisNuzCmTTLkWBTYHr6hF5QjxDUXci-cGvsmHjnTSaFo2KRrNplsi55OPfX5pdXNo_Py22A"/>
+</div>
+<!-- In-Card Zoom & Crop Bar -->
+<div class="absolute bottom-3 left-3 right-3 bg-warm-ivory/90 backdrop-blur-sm p-2 flex items-center justify-between text-xs transition-opacity duration-300">
+<div class="flex items-center space-x-1">
+<span class="font-label-caps-wide text-[9px] uppercase tracking-wider text-secondary mr-1">Zoom:</span>
+<button class="zoom-btn-2 px-2 py-1 bg-ink-black text-warm-ivory font-label-caps-wide text-[9px]" onclick="setZoom(2, 1.0, '50% center')" type="button">1.0x</button>
+<button class="zoom-btn-2 px-2 py-1 bg-transparent text-ink-black hover:bg-champagne/40 font-label-caps-wide text-[9px]" onclick="setZoom(2, 1.5, '50% 40%')" type="button">1.5x</button>
+<button class="zoom-btn-2 px-2 py-1 bg-transparent text-ink-black hover:bg-champagne/40 font-label-caps-wide text-[9px]" onclick="setZoom(2, 2.0, '50% 45%')" type="button">2.0x</button>
+</div>
+<button class="font-label-caps-wide text-[9px] uppercase tracking-wider text-oxblood hover:underline" onclick="openDetailModal(2)" type="button">
+                Inspect
+              </button>
+</div>
+</div>
+<!-- Product Details -->
+<div class="p-6 flex flex-col flex-grow justify-between space-y-4">
+<div class="space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-caps-wide text-label-caps-wide uppercase text-secondary">Product 02 • Designer Blouse</span>
+<span class="font-price-editorial text-price-editorial text-ink-black font-semibold">₹16,500</span>
+</div>
+<h3 class="font-title-editorial text-2xl text-ink-black">The Afterdark Sculpt Blouse</h3>
+<p class="font-body-sm text-body-sm text-secondary">
+                Structured fitted blouse with an architectural neckline and clean shoulder line. Sculpted evening cut.
+              </p>
+</div>
+<!-- Approved claims tags -->
+<div class="pt-2 border-t border-champagne/30">
+<div class="flex flex-wrap gap-1.5 mb-4">
+<span class="bg-surface-variant text-on-surface-variant font-label-caps-wide text-[9px] px-2 py-0.5 uppercase">Silk satin</span>
+<span class="bg-oxblood/10 text-oxblood font-label-caps-wide text-[9px] px-2 py-0.5 uppercase">Oxblood</span>
+<span class="bg-surface-variant text-on-surface-variant font-label-caps-wide text-[9px] px-2 py-0.5 uppercase">Architectural Cut</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex-1 bg-ink-black text-warm-ivory py-3 px-4 font-label-caps-wide text-label-caps-wide uppercase tracking-widest hover:bg-deep-espresso transition-colors text-center" onclick="addToCart(2)" type="button">
+                  Add to Cart
+                </button>
+<button class="p-3 bg-surface-variant text-ink-black hover:bg-champagne transition-colors" onclick="openDetailModal(2)" title="View details" type="button">
+<span class="material-symbols-outlined text-[18px] block">visibility</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- PRODUCT 03: THE MIDNIGHT SHARARA -->
+<article class="product-card flex flex-col bg-surface-container-low transition-all duration-300 hover:shadow-lg" data-product-id="3">
+<!-- Image Viewport with interactive zoom/crop -->
+<div class="relative w-full aspect-[3/4] bg-surface-container overflow-hidden group">
+<div class="w-full h-full overflow-hidden flex items-center justify-center" id="img-container-3">
+<!-- Right 33% Crop: object-position [86% center] with scale -->
+<img alt="The Midnight Sharara in Deep Espresso Raw Silk" class="w-full h-full object-cover object-[86%_center] scale-100 transition-all duration-500 ease-out" id="product-img-3" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByxiY0E7CY4o_hkVDuiVcB4mb8C_jeUUahF64EQYvCaP63pCwsxMXuWsCV4eaaXeb6T0rAkrhcKrInhAgLOjD0PbjnNglbL0bQu8b3WxSjt7pEqLH9xatEUWNGrJiF3npaLPPLkRsX41WFFvQQ_G99ViW9XQBeAhK7tpowCwS1K5na2kDPX44lOUPF24s8oHKndkFWRKEE36EfsjyVpMwHNgCCMbmEaFAhgPPIpP7eXr_Z1Ly-zf1Lz2t09_sVQsBd0Q"/>
+</div>
+<!-- In-Card Zoom & Crop Bar -->
+<div class="absolute bottom-3 left-3 right-3 bg-warm-ivory/90 backdrop-blur-sm p-2 flex items-center justify-between text-xs transition-opacity duration-300">
+<div class="flex items-center space-x-1">
+<span class="font-label-caps-wide text-[9px] uppercase tracking-wider text-secondary mr-1">Zoom:</span>
+<button class="zoom-btn-3 px-2 py-1 bg-ink-black text-warm-ivory font-label-caps-wide text-[9px]" onclick="setZoom(3, 1.0, '86% center')" type="button">1.0x</button>
+<button class="zoom-btn-3 px-2 py-1 bg-transparent text-ink-black hover:bg-champagne/40 font-label-caps-wide text-[9px]" onclick="setZoom(3, 1.25, '86% 65%')" type="button">1.25x</button>
+<button class="zoom-btn-3 px-2 py-1 bg-transparent text-ink-black hover:bg-champagne/40 font-label-caps-wide text-[9px]" onclick="setZoom(3, 2.0, '86% 25%')" type="button">2.0x</button>
+</div>
+<button class="font-label-caps-wide text-[9px] uppercase tracking-wider text-oxblood hover:underline" onclick="openDetailModal(3)" type="button">
+                Inspect
+              </button>
+</div>
+</div>
+<!-- Product Details -->
+<div class="p-6 flex flex-col flex-grow justify-between space-y-4">
+<div class="space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-caps-wide text-label-caps-wide uppercase text-secondary">Product 03 • Designer Sharara</span>
+<span class="font-price-editorial text-price-editorial text-ink-black font-semibold">₹42,000</span>
+</div>
+<h3 class="font-title-editorial text-2xl text-ink-black">The Midnight Sharara</h3>
+<p class="font-body-sm text-body-sm text-secondary">
+                High-waisted sharara with controlled flare, paired with a streamlined cropped top. Tonal satin detailing.
+              </p>
+</div>
+<!-- Approved claims tags -->
+<div class="pt-2 border-t border-champagne/30">
+<div class="flex flex-wrap gap-1.5 mb-4">
+<span class="bg-surface-variant text-on-surface-variant font-label-caps-wide text-[9px] px-2 py-0.5 uppercase">Raw Silk</span>
+<span class="bg-deep-espresso/10 text-deep-espresso font-label-caps-wide text-[9px] px-2 py-0.5 uppercase">Deep Espresso</span>
+<span class="bg-surface-variant text-on-surface-variant font-label-caps-wide text-[9px] px-2 py-0.5 uppercase">Controlled Flare</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex-1 bg-ink-black text-warm-ivory py-3 px-4 font-label-caps-wide text-label-caps-wide uppercase tracking-widest hover:bg-deep-espresso transition-colors text-center" onclick="addToCart(3)" type="button">
+                  Add to Cart
+                </button>
+<button class="p-3 bg-surface-variant text-ink-black hover:bg-champagne transition-colors" onclick="openDetailModal(3)" title="View details" type="button">
+<span class="material-symbols-outlined text-[18px] block">visibility</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- EDITORIAL STORYBOARD / THREE-SCENE RHYTHM -->
+<section class="w-full bg-deep-espresso text-warm-ivory py-space-3xl px-margin md:px-margin-tablet lg:px-margin-desktop">
+<div class="max-w-[1440px] mx-auto">
+<div class="text-center max-w-xl mx-auto mb-space-2xl space-y-2">
+<span class="font-label-caps-wide text-label-caps-wide uppercase tracking-[0.25em] text-champagne block">The Cinematic Arc</span>
+<h2 class="font-headline-lg text-headline-lg text-warm-ivory">Three Scenes to Remember</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Scene 1 -->
+<div class="bg-ink-black/40 p-8 flex flex-col justify-between border-t border-champagne/30 space-y-6">
+<div class="space-y-3">
+<span class="font-label-caps-wide text-label-caps-wide uppercase text-champagne block">Scene 01 • 19:30 HRS</span>
+<h3 class="font-headline-sm text-headline-sm italic font-light">“Tonight deserves a look.”</h3>
+<p class="font-body-sm text-body-sm text-secondary-fixed-dim">
+              Close-ups of pure silk satin sliding through fingers. The precise fastening of the architectural Oxblood neckline. Unadorned confidence in the dressing mirror.
+            </p>
+</div>
+<div class="h-44 w-full bg-ink-black overflow-hidden relative">
+<img alt="Fabric fastening close-up" class="w-full h-full object-cover object-[50%_35%] opacity-80 hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDl91kxtlO_S5peLjHWFqrO8AYlDD1dg0Ee2DgDf7VELDdPYmyhak8YL1fRnrr46eUYx-XMcjMiV5f_GQAL0NzcTHVtlW4ODLOsVdCAMpFTQPn721kB2HY-89fBMfB2qZLmn3hbxNnC3m4idx0Qje2PHFdeO4PV92n_a9C9FHaJ-M_WC-gmHtqBs2ytKcJriYdjx0cjBGnyfBi8pbTD-NpSB5Ubko2uJ-AYpNkGveR856vrdl17lQMePV-R2GLrV8v4_Q"/>
+</div>
+</div>
+<!-- Scene 2 -->
+<div class="bg-ink-black/40 p-8 flex flex-col justify-between border-t border-oxblood space-y-6">
+<div class="space-y-3">
+<span class="font-label-caps-wide text-label-caps-wide uppercase text-oxblood block">Scene 02 • 20:45 HRS</span>
+<h3 class="font-headline-sm text-headline-sm italic font-light">“Make an entrance.”</h3>
+<p class="font-body-sm text-body-sm text-secondary-fixed-dim">
+              Stepping across stone thresholds. The controlled flare of the raw silk sharara moving naturally with deliberate stride. Not loud, but instantly noticed.
+            </p>
+</div>
+<div class="h-44 w-full bg-ink-black overflow-hidden relative">
+<img alt="Occasionwear entrance" class="w-full h-full object-cover object-[86%_40%] opacity-80 hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjMtXrkDKBCCNdwKYQ39f1bCui4KXFJ3TK6dlPAL1lnQZ--PWc3-sB3oWlAbhjhiMXKRE2LTzvXK9_5zZlItQwjXlUlf9yqDxew99dmu1qaPeBaKzg6BOZbvEuiSz3W7bFP7J1tKPDP-ZoZLV3EAVVKbSflg_YYSnB6CW8LzhyIi56AXprXWCs6XqcydjdtknCBtbJayGVGGPItP_mwcTgR9oUKN0lxdHdlKy4WzbekCpHW0hQ2BfUeuRGYzD9YU15YQ"/>
+</div>
+</div>
+<!-- Scene 3 -->
+<div class="bg-ink-black/40 p-8 flex flex-col justify-between border-t border-champagne/30 space-y-6">
+<div class="space-y-3">
+<span class="font-label-caps-wide text-label-caps-wide uppercase text-champagne block">Scene 03 • 23:15 HRS</span>
+<h3 class="font-headline-sm text-headline-sm italic font-light">“Leave an impression.”</h3>
+<p class="font-body-sm text-body-sm text-secondary-fixed-dim">
+              The room has emptied slightly, yet the memory of the silhouette remains. You were never meant to blend in. The modern Indian icon defined.
+            </p>
+</div>
+<div class="h-44 w-full bg-ink-black overflow-hidden relative">
+<img alt="Silhouetted evening drape" class="w-full h-full object-cover object-[14%_50%] opacity-80 hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCD2UEgjg9soAzMV2WK3PX2wJRRLAs5YEPyzHlnW-g7030jCOKByhKOC9qbOdNmaiiJ3yGqZzTiueDfpvh-oT8T8RzRRuaf69xCgiIjzPX2gYXj5lNKHdPAguaZ4RvLeKxagSqV4vXfytF6BcCmsyjFk4v-VMIKdIF0JlkajTJ6qgzbXOlNM66fhWFLuhXBOnkcuxd9SFFXipIX9d9rBRgfvvKTGzR3VWgu5ju4AbdwCdoYWY94aUIbq7PJiQTPszYeQA"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- PRODUCT DETAIL INSPECTION MODAL -->
+<div aria-labelledby="modal-title" aria-modal="true" class="fixed inset-0 z-50 hidden" id="product-modal" role="dialog">
+<!-- Backdrop -->
+<div class="fixed inset-0 bg-ink-black/70 backdrop-blur-sm transition-opacity" onclick="closeDetailModal()"></div>
+<!-- Modal Box -->
+<div class="fixed inset-0 z-10 overflow-y-auto flex items-center justify-center p-4 md:p-8">
+<div class="relative bg-warm-ivory text-ink-black w-full max-w-5xl shadow-2xl overflow-hidden flex flex-col lg:flex-row max-h-[92vh]">
+<!-- Close Button -->
+<button class="absolute top-4 right-4 z-20 w-10 h-10 bg-warm-ivory/80 flex items-center justify-center hover:bg-ink-black hover:text-warm-ivory transition-colors" onclick="closeDetailModal()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+<!-- Left Image Stage -->
+<div class="lg:w-1/2 bg-surface-container relative min-h-[380px] lg:min-h-full flex flex-col">
+<div class="relative flex-grow overflow-hidden flex items-center justify-center">
+<img alt="Garment detail inspection" class="w-full h-full object-cover transition-all duration-500" id="modal-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjDxgyLY_YxjqlA1IizWjkH7GYYRzJ1DvJmAMY_OataDSV1A3FoaehS18Y_AbdMXK21K9Xnqpm5a8GkiAPgpshDSPDXNVdpaQYpNZr9s-qpXt3Hn0WgrHi1aZOu9M_qLJFBnOWz9G04qlq44Ved2HXTtkCPQi6AHDqsw9qcmEJvdiRCsTrkBXYN11oCadb1MDUs03kpftL-YVbQEaBeQ9SLGp8CAwkFHQEksA8_vfG0OXW1xQlUQn9ySOHUUI5Mw8dKA"/>
+</div>
+<!-- Zoom & Crop Hint Interactive Controls on Modal -->
+<div class="p-4 bg-warm-ivory/95 border-t border-champagne/40 flex flex-col space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-label-caps-wide text-[10px] uppercase tracking-wider text-secondary">Inspection Zoom:</span>
+<div class="flex gap-1" id="modal-zoom-controls">
+<!-- Injected via JS -->
+</div>
+</div>
+<div class="space-y-1">
+<span class="font-label-caps-wide text-[10px] uppercase tracking-wider text-secondary block">Crop Hints &amp; Angles:</span>
+<div class="flex flex-wrap gap-1" id="modal-crop-hints">
+<!-- Injected via JS -->
+</div>
+</div>
+</div>
+</div>
+<!-- Right Content Details Stage -->
+<div class="lg:w-1/2 p-6 md:p-10 overflow-y-auto flex flex-col justify-between space-y-6">
+<div class="space-y-4">
+<div>
+<span class="font-label-caps-wide text-label-caps-wide uppercase text-secondary" id="modal-category">Category</span>
+<h2 class="font-headline-md text-headline-md text-ink-black mt-1" id="modal-title">Product Title</h2>
+<div class="flex items-baseline gap-4 mt-2">
+<span class="font-price-editorial text-2xl text-ink-black font-semibold" id="modal-price">₹0</span>
+<span class="font-label-caps-wide text-xs uppercase px-2 py-0.5 bg-champagne/30 text-deep-espresso" id="modal-color-tag">Colour</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-secondary leading-relaxed" id="modal-description">
+              Description text here.
+            </p>
+<!-- Silhouette & Material Spec -->
+<div class="p-4 bg-surface-container-low space-y-2 border-l-2 border-ink-black">
+<span class="font-label-caps-wide text-[10px] uppercase text-ink-black font-bold block">Silhouette &amp; Craft Specification</span>
+<p class="font-body-sm text-body-sm text-secondary" id="modal-silhouette">Silhouette notes.</p>
+</div>
+<!-- Approved Factual Claims Checklist -->
+<div>
+<span class="font-label-caps-wide text-label-caps-wide uppercase tracking-wider text-ink-black block mb-2">Verified Specifications</span>
+<ul class="space-y-1 font-body-sm text-body-sm text-secondary" id="modal-claims">
+<!-- Claims injected via JS -->
+</ul>
+</div>
+<!-- Styling Guidance -->
+<div class="bg-surface-variant/40 p-4">
+<span class="font-label-caps-wide text-[10px] uppercase tracking-wider text-oxblood block mb-1">Styling Recommendation</span>
+<p class="font-body-sm text-body-sm italic text-ink-black" id="modal-styling">Styling note.</p>
+</div>
+</div>
+<!-- Add to Cart CTA -->
+<div class="pt-4 border-t border-champagne/40 flex items-center gap-3">
+<button class="w-full bg-ink-black text-warm-ivory py-4 px-6 font-label-caps-wide text-label-caps-wide uppercase tracking-widest hover:bg-deep-espresso transition-colors text-center" id="modal-add-btn" type="button">
+              Add to Cart
+            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- CART SLIDE-OVER DRAWER -->
+<div aria-labelledby="slide-over-title" aria-modal="true" class="fixed inset-0 z-50 hidden" id="cart-drawer" role="dialog">
+<!-- Background backdrop -->
+<div class="fixed inset-0 bg-ink-black/60 backdrop-blur-sm transition-opacity" onclick="toggleCartDrawer(false)"></div>
+<div class="fixed inset-y-0 right-0 max-w-full flex pl-10">
+<div class="w-screen max-w-md bg-warm-ivory shadow-2xl flex flex-col justify-between">
+<!-- Cart Header -->
+<div class="p-6 border-b border-champagne/40 flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+<h2 class="font-headline-sm text-headline-sm uppercase tracking-wide text-ink-black" id="slide-over-title">Your Selection</h2>
+</div>
+<button class="text-ink-black hover:text-oxblood transition-colors" onclick="toggleCartDrawer(false)" type="button">
+<span class="material-symbols-outlined text-[24px]">close</span>
+</button>
+</div>
+<!-- Cart Items List Container -->
+<div class="p-6 flex-grow overflow-y-auto space-y-6" id="cart-items-container">
+<!-- Dynamically populated or Empty State -->
+</div>
+<!-- Cart Footer with Itemized Subtotal & Total -->
+<div class="p-6 bg-surface-container border-t border-champagne/40 space-y-4">
+<div class="space-y-2">
+<div class="flex justify-between font-body-sm text-body-sm text-secondary">
+<span>Subtotal</span>
+<span id="cart-subtotal">₹0</span>
+</div>
+<div class="flex justify-between font-body-sm text-body-sm text-secondary">
+<span>Occasion Delivery (Pan-India Atelier Draping)</span>
+<span>Complimentary</span>
+</div>
+<div class="flex justify-between font-headline-sm text-headline-sm text-ink-black pt-2 border-t border-champagne/40">
+<span>Total</span>
+<span id="cart-total">₹0</span>
+</div>
+</div>
+<button class="w-full bg-ink-black text-warm-ivory py-4 px-6 font-label-caps-wide text-label-caps-wide uppercase tracking-widest hover:bg-deep-espresso transition-colors text-center" onclick="handleCheckoutClick()" type="button">
+            Proceed to Private Atelier Order
+          </button>
+<p class="font-label-caps-wide text-[9px] uppercase tracking-wider text-secondary text-center">
+            Handled directly by VAIRA Atelier stylists • No automated mass checkout
+          </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- SCRIPT: Complete State Management for Zoom, Crop hints, Details Modal, and Persistent Cart -->
+<script>
+  // Product Catalog definition strictly from STORE-KIT.md
+  const products = {
+    1: {
+      id: 1,
+      name: "The Afterdark Saree",
+      category: "Saree",
+      price: 38500,
+      material: "Silk satin",
+      color: "Ink Black",
+      colorClass: "bg-ink-black text-warm-ivory",
+      silhouette: "Fluid six-yard saree with a clean fall and narrow finished edge.",
+      description: "A fluid contemporary saree designed around a clean drape and a deep, evening-ready colour. The silhouette is intentionally restrained, allowing the fabric, proportion and movement to create the visual impact.",
+      styling: "Pair with the Afterdark Sculpt Blouse for a complete evening look.",
+      claims: [
+        "Silk satin saree",
+        "Ink-black colour",
+        "Six-yard saree",
+        "Narrow finished edge",
+        "Designed for evening occasionwear"
+      ],
+      zoomOptions: [
+        { label: "Full product", scale: 1.0, position: "14% center" },
+        { label: "Three-quarter drape", scale: 1.25, position: "14% 35%" },
+        { label: "Fabric detail", scale: 2.0, position: "14% 75%" }
+      ],
+      crops: [
+        { label: "Full-length drape", scale: 1.0, position: "14% center" },
+        { label: "Waist-level fall", scale: 1.3, position: "14% 45%" },
+        { label: "Fabric surface", scale: 2.2, position: "14% 75%" },
+        { label: "Narrow border detail", scale: 2.0, position: "16% 90%" },
+        { label: "Movement angle", scale: 1.25, position: "14% 30%" }
+      ]
+    },
+    2: {
+      id: 2,
+      name: "The Afterdark Sculpt Blouse",
+      category: "Designer Blouse",
+      price: 16500,
+      material: "Silk satin",
+      color: "Oxblood",
+      colorClass: "bg-oxblood text-on-tertiary",
+      silhouette: "Structured fitted blouse with an architectural neckline and clean shoulder line.",
+      description: "A sharply cut blouse built around a sculpted neckline and clean architectural lines. Designed to provide a strong fashion point of view while remaining refined enough for evening dressing.",
+      styling: "Designed to pair with black, ivory or deep-toned sarees.",
+      claims: [
+        "Silk satin blouse",
+        "Oxblood colour",
+        "Structured fitted silhouette",
+        "Architectural neckline",
+        "Designed for occasionwear"
+      ],
+      zoomOptions: [
+        { label: "Full garment", scale: 1.0, position: "50% center" },
+        { label: "Upper-body detail", scale: 1.5, position: "50% 35%" },
+        { label: "Construction & fabric", scale: 2.0, position: "50% 50%" }
+      ],
+      crops: [
+        { label: "Front three-quarter", scale: 1.0, position: "50% center" },
+        { label: "Shoulder & neckline", scale: 1.7, position: "50% 32%" },
+        { label: "Side silhouette", scale: 1.4, position: "48% 40%" },
+        { label: "Construction seam", scale: 2.2, position: "50% 52%" },
+        { label: "Fabric luster", scale: 2.0, position: "52% 48%" }
+      ]
+    },
+    3: {
+      id: 3,
+      name: "The Midnight Sharara",
+      category: "Designer Sharara",
+      price: 42000,
+      material: "Raw silk with tonal satin detailing",
+      color: "Deep Espresso",
+      colorClass: "bg-deep-espresso text-warm-ivory",
+      silhouette: "High-waisted sharara with controlled flare, paired with a streamlined cropped top.",
+      description: "A contemporary sharara set built around movement, volume and a controlled silhouette. The design balances the visual richness expected from occasionwear with a cleaner modern proportion.",
+      styling: "Style with minimal jewellery and a sculptural heel to maintain the collection's restrained aesthetic.",
+      claims: [
+        "Raw silk sharara",
+        "Deep espresso colour",
+        "High-waisted silhouette",
+        "Controlled flare",
+        "Tonal satin detailing",
+        "Designed for occasionwear"
+      ],
+      zoomOptions: [
+        { label: "Full product", scale: 1.0, position: "86% center" },
+        { label: "Silhouette / movement", scale: 1.25, position: "86% 65%" },
+        { label: "Detail", scale: 2.0, position: "86% 25%" }
+      ],
+      crops: [
+        { label: "Full-body silhouette", scale: 1.0, position: "86% center" },
+        { label: "Waist-to-hem flare", scale: 1.3, position: "86% 70%" },
+        { label: "Movement shot", scale: 1.25, position: "86% 55%" },
+        { label: "Tonal detailing close-up", scale: 2.1, position: "86% 60%" },
+        { label: "Cropped top & neckline", scale: 1.8, position: "86% 25%" }
+      ]
+    }
+  };
+
+  // Cart State in Memory
+  let cart = {
+    1: 1, // Pre-seeded with 1 item to align with shell count badge
+    2: 1
+  };
+
+  // Format INR currency
+  function formatINR(amount) {
+    return '₹' + amount.toLocaleString('en-IN');
+  }
+
+  // Set Zoom on Product Card
+  function setZoom(productId, scale, position) {
+    const img = document.getElementById('product-img-' + productId);
+    if (!img) return;
+    img.style.transform = `scale(${scale})`;
+    img.style.objectPosition = position;
+
+    // Highlight active button
+    document.querySelectorAll(`.zoom-btn-${productId}`).forEach(btn => {
+      btn.classList.remove('bg-ink-black', 'text-warm-ivory');
+      btn.classList.add('bg-transparent', 'text-ink-black');
+    });
+    event.currentTarget.classList.remove('bg-transparent', 'text-ink-black');
+    event.currentTarget.classList.add('bg-ink-black', 'text-warm-ivory');
+  }
+
+  // Open Detail Modal
+  let activeModalProductId = null;
+  function openDetailModal(productId) {
+    const product = products[productId];
+    if (!product) return;
+    activeModalProductId = productId;
+
+    // Populate Modal Details
+    document.getElementById('modal-category').innerText = `Product 0${product.id} • ${product.category}`;
+    document.getElementById('modal-title').innerText = product.name;
+    document.getElementById('modal-price').innerText = formatINR(product.price);
+    document.getElementById('modal-color-tag').innerText = product.color;
+    document.getElementById('modal-color-tag').className = `font-label-caps-wide text-xs uppercase px-2 py-0.5 ${product.colorClass}`;
+    document.getElementById('modal-description').innerText = product.description;
+    document.getElementById('modal-silhouette').innerText = product.silhouette;
+    document.getElementById('modal-styling').innerText = `"${product.styling}"`;
+
+    // Populate Claims
+    const claimsContainer = document.getElementById('modal-claims');
+    claimsContainer.innerHTML = '';
+    product.claims.forEach(claim => {
+      const li = document.createElement('li');
+      li.className = 'flex items-center text-xs space-x-2';
+      li.innerHTML = `<span class="material-symbols-outlined text-oxblood text-sm">check</span><span>${claim}</span>`;
+      claimsContainer.appendChild(li);
+    });
+
+    // Reset Image Position
+    const modalImg = document.getElementById('modal-img');
+    const defaultZoom = product.zoomOptions[0];
+    modalImg.style.transform = `scale(${defaultZoom.scale})`;
+    modalImg.style.objectPosition = defaultZoom.position;
+
+    // Populate Zoom Controls
+    const zoomControls = document.getElementById('modal-zoom-controls');
+    zoomControls.innerHTML = '';
+    product.zoomOptions.forEach((z, idx) => {
+      const btn = document.createElement('button');
+      btn.className = `px-2 py-1 font-label-caps-wide text-[9px] uppercase border border-champagne ${idx === 0 ? 'bg-ink-black text-warm-ivory' : 'bg-transparent text-ink-black'}`;
+      btn.innerText = `${z.scale.toFixed(1)}x`;
+      btn.onclick = () => {
+        modalImg.style.transform = `scale(${z.scale})`;
+        modalImg.style.objectPosition = z.position;
+        Array.from(zoomControls.children).forEach(c => {
+          c.className = 'px-2 py-1 font-label-caps-wide text-[9px] uppercase border border-champagne bg-transparent text-ink-black';
+        });
+        btn.className = 'px-2 py-1 font-label-caps-wide text-[9px] uppercase border border-champagne bg-ink-black text-warm-ivory';
+      };
+      zoomControls.appendChild(btn);
+    });
+
+    // Populate Crop Hints
+    const cropControls = document.getElementById('modal-crop-hints');
+    cropControls.innerHTML = '';
+    product.crops.forEach(c => {
+      const btn = document.createElement('button');
+      btn.className = 'px-2.5 py-1 bg-surface-container hover:bg-champagne font-label-caps-wide text-[9px] uppercase transition-colors';
+      btn.innerText = c.label;
+      btn.onclick = () => {
+        modalImg.style.transform = `scale(${c.scale})`;
+        modalImg.style.objectPosition = c.position;
+      };
+      cropControls.appendChild(btn);
+    });
+
+    // Configure Add to Cart CTA inside Modal
+    const addBtn = document.getElementById('modal-add-btn');
+    addBtn.onclick = () => {
+      addToCart(product.id);
+      closeDetailModal();
+    };
+
+    // Show modal
+    document.getElementById('product-modal').classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeDetailModal() {
+    document.getElementById('product-modal').classList.add('hidden');
+    document.body.style.overflow = '';
+  }
+
+  // Cart Management
+  function addToCart(productId) {
+    if (cart[productId]) {
+      cart[productId] += 1;
+    } else {
+      cart[productId] = 1;
+    }
+    updateCartUI();
+    toggleCartDrawer(true);
+  }
+
+  function updateQuantity(productId, delta) {
+    if (!cart[productId]) return;
+    cart[productId] += delta;
+    if (cart[productId] <= 0) {
+      delete cart[productId];
+    }
+    updateCartUI();
+  }
+
+  function removeItem(productId) {
+    delete cart[productId];
+    updateCartUI();
+  }
+
+  function updateCartUI() {
+    const container = document.getElementById('cart-items-container');
+    const subtotalEl = document.getElementById('cart-subtotal');
+    const totalEl = document.getElementById('cart-total');
+    
+    // Update global shell counter badge if present
+    const totalCount = Object.values(cart).reduce((sum, qty) => sum + qty, 0);
+    const shellBadge = document.querySelector('header button[aria-label="Cart"] span:last-child');
+    if (shellBadge) {
+      shellBadge.textContent = totalCount;
+      shellBadge.style.display = totalCount > 0 ? 'flex' : 'none';
+    }
+
+    container.innerHTML = '';
+
+    if (totalCount === 0) {
+      container.innerHTML = `
+        <div class="h-64 flex flex-col items-center justify-center text-center space-y-3">
+          <span class="material-symbols-outlined text-4xl text-secondary">shopping_bag</span>
+          <p class="font-headline-sm text-headline-sm text-ink-black">Your selection is empty</p>
+          <p class="font-body-sm text-body-sm text-secondary max-w-xs">
+            Explore our launch silhouettes and select pieces designed for presence without excess.
+          </p>
+          <a href="#collection-section" onclick="toggleCartDrawer(false)" class="mt-4 inline-block bg-ink-black text-warm-ivory px-6 py-3 font-label-caps-wide text-label-caps-wide uppercase tracking-widest">
+            View Collection
+          </a>
+        </div>
+      `;
+      subtotalEl.innerText = formatINR(0);
+      totalEl.innerText = formatINR(0);
+      return;
+    }
+
+    let subtotal = 0;
+
+    Object.keys(cart).forEach(id => {
+      const product = products[id];
+      const qty = cart[id];
+      const itemTotal = product.price * qty;
+      subtotal += itemTotal;
+
+      const itemCard = document.createElement('div');
+      itemCard.className = 'flex gap-4 pb-6 border-b border-champagne/30 items-start';
+      itemCard.innerHTML = `
+        <div class="w-20 h-24 bg-surface-container overflow-hidden flex-shrink-0">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC70hV3E4I0Dh9WTV-WGSLNudkJKKeDVIW7BVejIglS3f4linvFGuwwKh4cX4nLlnZ5r8fQULEapFJXzGRhEyFS91eVm7BVuZ-N03IpAvTm8uVJHWkcoD-x1T-bnTmxa3nvdYnPnq2JoSnHnFRaK8n_ApQw5mHC39rIi1HlF2b1PwFKNWHFzrpW-tUYr9gggaLDKTC7AqKbIpoEsHcp1k0zF8tTP-0-5ixD1RrB4bsrpMsAMB_ZM1sMCbK0ylJnYRV3Fw" class="w-full h-full object-cover object-[${id === '1' ? '14%' : id === '2' ? '50%' : '86%'}_center]" alt="${product.name}" />
+        </div>
+        <div class="flex-grow space-y-1">
+          <div class="flex justify-between items-start">
+            <h4 class="font-title-editorial text-base text-ink-black">${product.name}</h4>
+            <button onclick="removeItem(${id})" class="text-secondary hover:text-oxblood" title="Remove item">
+              <span class="material-symbols-outlined text-[16px]">close</span>
+            </button>
+          </div>
+          <p class="font-label-caps-wide text-[10px] text-secondary uppercase">${product.material} &bull; ${product.color}</p>
+          <p class="font-price-editorial text-sm font-semibold text-ink-black pt-1">${formatINR(product.price)}</p>
+          
+          <div class="flex items-center space-x-3 pt-2">
+            <div class="flex items-center border border-champagne">
+              <button onclick="updateQuantity(${id}, -1)" class="w-6 h-6 flex items-center justify-center text-xs hover:bg-champagne/40">-</button>
+              <span class="w-8 text-center text-xs font-semibold">${qty}</span>
+              <button onclick="updateQuantity(${id}, 1)" class="w-6 h-6 flex items-center justify-center text-xs hover:bg-champagne/40">+</button>
+            </div>
+            <span class="text-xs text-secondary">₹${itemTotal.toLocaleString('en-IN')}</span>
+          </div>
+        </div>
+      `;
+      container.appendChild(itemCard);
+    });
+
+    subtotalEl.innerText = formatINR(subtotal);
+    totalEl.innerText = formatINR(subtotal);
+  }
+
+  function toggleCartDrawer(open) {
+    const drawer = document.getElementById('cart-drawer');
+    if (open) {
+      drawer.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    } else {
+      drawer.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+  }
+
+  function handleCheckoutClick() {
+    alert('VAIRA Atelier Request: Your bespoke evening selection has been registered with our atelier stylists. You will receive an invitation for private draping.');
+    toggleCartDrawer(false);
+  }
+
+  // Hook global shell Cart button to open the slide-over cart drawer
+  document.addEventListener('DOMContentLoaded', () => {
+    const headerCartBtn = document.querySelector('header button[aria-label="Cart"]');
+    if (headerCartBtn) {
+      headerCartBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        toggleCartDrawer(true);
+      });
+    }
+    updateCartUI();
+  });
+</script></main><footer class="w-full bg-warm-ivory pt-space-3xl pb-space-2xl"><div class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop flex flex-col md:flex-row items-baseline justify-between gap-space-xl"><div class="space-y-space-xs"><span class="font-headline-sm text-headline-sm uppercase tracking-wider text-ink-black block">VAIRA</span><p class="font-body-md text-body-md text-secondary italic">Make an entrance. Leave an impression.</p></div><div class="flex flex-col md:flex-row md:items-center gap-space-md md:gap-space-2xl"><div class="flex items-center gap-space-lg"><a class="font-label-caps-wide text-label-caps-wide uppercase text-on-surface-variant hover:text-ink-black transition-colors" data-path="collection" href="#">Archive</a><a class="font-label-caps-wide text-label-caps-wide uppercase text-on-surface-variant hover:text-ink-black transition-colors" data-path="editorial" href="#">Journal</a><a class="font-label-caps-wide text-label-caps-wide uppercase text-on-surface-variant hover:text-ink-black transition-colors" data-path="store-promise" href="#">Craft</a></div><p class="font-label-caps-wide text-label-caps-wide uppercase text-on-surface-variant">© 2025 VAIRA ATELIER. ALL RIGHTS RESERVED.</p></div></div></footer></body></html>
